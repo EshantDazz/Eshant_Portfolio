@@ -203,6 +203,68 @@
   .pdf-close{font-family:var(--mono);font-size:18px;color:var(--muted);background:none;border:none;cursor:pointer;line-height:1;padding:2px 6px;border-radius:4px;transition:.2s}
   .pdf-close:hover{color:var(--ink);background:var(--surface-2)}
   .pdf-frame{flex:1;width:100%;border:none}
+
+  /* ── MOBILE BOTTOM NAV ── */
+  .mob-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;
+    background:rgba(8,11,22,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-top:1px solid var(--line-strong);
+    padding-bottom:env(safe-area-inset-bottom,0)}
+  .mob-nav-inner{display:flex;justify-content:space-around}
+  .mob-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:10px 4px;font-family:var(--mono);font-size:9.5px;color:var(--muted);
+    letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:color .2s;
+    border:none;background:none;gap:3px;-webkit-tap-highlight-color:transparent}
+  .mob-nav a.active{color:var(--blue)}
+  .mob-nav a .mn-dot{width:3px;height:3px;border-radius:50%;background:var(--blue);opacity:0;transition:opacity .2s;margin-top:2px}
+  .mob-nav a.active .mn-dot{opacity:1}
+  @media (max-width:920px){.mob-nav{display:block}}
+
+  /* ── RESPONSIVE CORE ── */
+  @media (max-width:920px){
+    main{padding-bottom:80px}
+    section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .shell{padding:0 20px}
+    .hero{padding:80px 0 56px;min-height:auto}
+    .hero h1{font-size:clamp(40px,10vw,92px)}
+    .lede{font-size:15.5px;margin-bottom:26px}
+    .btn{font-size:12.5px;padding:11px 18px}
+    .cta-row{gap:10px}
+    .quickstats{gap:22px;margin-top:40px}
+    .qs .n{font-size:26px}
+    .qs .l{font-size:10.5px}
+    section{padding:52px 0}
+    h2.sec{margin-bottom:6px}
+    .about-grid p{font-size:15.5px}
+    .datasheet .row{font-size:12px;padding:11px 14px}
+    .tl-item{padding:0 0 28px 26px}
+    .tl-role{font-size:18px}
+    .tl-item li{font-size:14px}
+    .card{padding:20px 18px}
+    .card h3{font-size:17px}
+    .card p{font-size:14px}
+    .edu-deg{font-size:16px}
+    .edu-school{font-size:13.5px}
+    .ach .body strong{font-size:14px}
+    .ach .body span{font-size:13px}
+    .lang-row{flex-wrap:wrap;gap:6px}
+    .lang-row .lvl{font-size:11px}
+    .contact{padding:64px 0 30px}
+    .contact p{font-size:15px}
+    .contact-links{flex-direction:column;align-items:stretch;gap:10px}
+    .contact-links .btn{justify-content:center}
+    .doc-btn{font-size:11.5px;padding:5px 10px}
+  }
+  @media (max-width:400px){
+    .shell{padding:0 14px}
+    .hero h1{font-size:clamp(36px,11vw,92px)}
+    .datasheet .row{flex-wrap:wrap;gap:3px}
+    .datasheet .v{text-align:left}
+    .pill{font-size:12px;padding:6px 10px}
+    .tag{font-size:11px}
+    .status{font-size:11.5px;padding:6px 11px}
+  }
 </style>
 </head>
 <body>
@@ -432,6 +494,18 @@
   </main>
 </div>
 
+<!-- Mobile bottom nav -->
+<nav class="mob-nav" id="mobNav">
+  <div class="mob-nav-inner">
+    <a data-to="home"><span>Home</span><span class="mn-dot"></span></a>
+    <a data-to="about"><span>About</span><span class="mn-dot"></span></a>
+    <a data-to="experience"><span>Exp</span><span class="mn-dot"></span></a>
+    <a data-to="projects"><span>Work</span><span class="mn-dot"></span></a>
+    <a data-to="skills"><span>Skills</span><span class="mn-dot"></span></a>
+    <a data-to="contact"><span>Contact</span><span class="mn-dot"></span></a>
+  </div>
+</nav>
+
 <!-- PDF Modal -->
 <div class="pdf-overlay" id="pdfOverlay" onclick="closePdfOnBackdrop(event)">
   <div class="pdf-modal">
@@ -486,9 +560,9 @@
     });
   });
 
-  // Active nav highlighting
-  const links=[...document.querySelectorAll('.navlink')];
-  const sections=links.map(l=>document.getElementById(l.dataset.to));
+  // Active nav highlighting (side + mobile)
+  const links=[...document.querySelectorAll('.navlink, .mob-nav a')];
+  const uniqueSections=[...new Set(links.map(l=>l.dataset.to))].map(id=>document.getElementById(id)).filter(Boolean);
   const navIo=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
       if(e.isIntersecting){
@@ -496,7 +570,7 @@
       }
     });
   },{rootMargin:'-45% 0px -50% 0px'});
-  sections.forEach(s=>s&&navIo.observe(s));
+  uniqueSections.forEach(s=>navIo.observe(s));
 
   // Typed role
   const roles=['Data Scientist','AI Engineer','GenAI Specialist','ML Engineer'];
