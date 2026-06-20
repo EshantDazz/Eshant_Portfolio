@@ -1,0 +1,16 @@
+langchain
+langchain_openai
+langchain-google-genai
+langchain-groq
+langgraph
+langgraph-prebuilt
+langchain-community
+
+
+asyncpg
+pandas
+python-dotenv
+tiktoken
+fastapi
+uvicorn[standard]
+jinja2
