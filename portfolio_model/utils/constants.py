@@ -40,15 +40,30 @@ Senior Generative AI Specialist with 4+ years of experience designing, building,
 
 ## TECHNICAL EXPERTISE
 
-- **Generative AI:** Prompt Engineering, Fine-tuning LLMs, Retrieval-Augmented Generation (RAG), Multi-Agent Systems, LLM Observability & Evaluation, LLM Optimisation, HuggingFace
-- **AI Frameworks:** LangChain, LlamaIndex, LangGraph, Autogen, Haystack, PyTorch, scikit-learn
-- **MLOps & LLMOps:** MLflow, LangSmith, Docker, CI/CD Pipelines
+- **Artificial Intelligence:** Machine Learning, Deep Learning (ANN & RNN), Generative AI
+- **Generative AI:** Prompt Engineering, Fine-tuning LLMs, Retrieval-Augmented Generation (RAG), Multi-Agentic Workflows, Agentic Architectures, React Agent, Deep Agent, LLM Observability & Monitoring, LLM Optimisation, LLM Evaluation, HuggingFace
+- **AI Frameworks:** LangChain, LlamaIndex, CrewAI, LangGraph, Autogen, Haystack, PyTorch, scikit-learn
+- **MLOps & LLMOps:** MLflow, DagsHub, LangSmith, Docker, CI/CD Pipelines
 - **Deep Learning:** Transformers, Encoder-Decoder, LSTM, GRU, Attention Mechanisms
 - **Natural Language Processing:** NER, Text Classification, Topic Modeling, Sentiment Analysis
 - **Cloud & DevOps:** AWS, Azure, Docker, CI/CD Pipelines
 - **Backend Development:** Python (FastAPI, Flask)
 - **Databases:** PostgreSQL, PGVector, Faiss, Chroma, Qdrant, Pinecone, Neo4j
-- **Programming Languages:** Python, SQL, Bash
+- **Programming Languages:** Python, R Programming, Java, C++
+
+---
+
+## CAPABILITIES & APPROACH
+
+- **End-to-End AI Product Delivery:** Eshant has the capability of deploying end-to-end models for prototypes or POCs. This includes building AI workflows with LangChain, LangGraph, or general SDKs or any other SDK as required. He creates the backend API using FastAPI, Quart, or Flask. He is also capable of building with Streamlit. He is not an expert with frontend but can build wonderful frontends for testing of products using vibe coding — in fact, the portfolio UI the user is seeing right now is also built with the help of that. He can do LLM monitoring with the help of MLflow or LangSmith. He can do evaluation with evals using LangSmith or MLflow with LLM-as-a-Judge. He can build RAG products and do RAG evaluation. Finally, he can do end-to-end deployment with CI/CD in Vercel, AWS EC2 with Elastic Beanstalk, and Azure Web Apps. He can also monitor logs in the cloud.
+
+- **LLM vs SLM Decision-Making:** Eshant knows when to use a Large Language Model or a Small Language Model to balance cost, latency, and accuracy for GenAI models.
+
+- **Vectorless RAG:** Eshant can build vectorless RAG with graph databases like Neo4j and can also use newer frameworks like LlamaIndex's vectorless RAG approach (PropertyGraphIndex).
+
+- **Data Science Foundations:** Eshant has good knowledge of descriptive and inferential statistics. He has hands-on experience with data preprocessing and feature engineering before diving into machine learning or deep learning work.
+
+- **Data Engineering Aspiration:** One area Eshant has not worked extensively in is Data Engineering using Hadoop, Spark, or other big data technologies — but he is very keen on learning and would love to get an opportunity in that as well, and is confident he can learn everything as quickly as possible.
 
 ---
 

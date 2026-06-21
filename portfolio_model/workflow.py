@@ -11,12 +11,10 @@ from langchain_core.messages import (
     get_buffer_string,
 )
 from langchain_core.messages.ai import AIMessageChunk
-from langchain_core.tools.base import BaseTool
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, MessagesState, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.graph.state import CompiledStateGraph
-from langgraph.prebuilt import ToolNode, tools_condition
 
 from portfolio_model.core.prompts import PORTFOLIO_SYSTEM_PROMPT
 from portfolio_model.llms import (
@@ -80,16 +78,19 @@ def _get_filtered_messages(messages: list, summary_model=None) -> list:
         older = older[:-1]
 
     try:
-        summary_response = _invoke_with_retry(summary_model, [
-            SystemMessage(
-                content=(
-                    "Summarise the following conversation history concisely. "
-                    "Capture all key topics discussed, user interests, and any "
-                    "pending questions. Be thorough but brief."
-                )
-            ),
-            HumanMessage(content=get_buffer_string(older)),
-        ])
+        summary_response = _invoke_with_retry(
+            summary_model,
+            [
+                SystemMessage(
+                    content=(
+                        "Summarise the following conversation history concisely. "
+                        "Capture all key topics discussed, user interests, and any "
+                        "pending questions. Be thorough but brief."
+                    )
+                ),
+                HumanMessage(content=get_buffer_string(older)),
+            ],
+        )
     except Exception:  # noqa: BLE001
         # Summarization failed after all retries — skip it and return recent messages only.
         return recent
@@ -106,7 +107,9 @@ def _get_filtered_messages(messages: list, summary_model=None) -> list:
 def portfolio_assistant(state: StatePortfolioChat):
     use_premium = state.get("use_premium", False)
     stream_model = llm_quen_stream_premium if use_premium else llm_quen_stream
-    sum_model = llm_quen_summary_model_premium if use_premium else llm_quen_summary_model
+    sum_model = (
+        llm_quen_summary_model_premium if use_premium else llm_quen_summary_model
+    )
 
     query = state.get("query")
     messages = state.get("messages")
@@ -127,7 +130,7 @@ def portfolio_assistant(state: StatePortfolioChat):
 
     try:
         response = _invoke_with_retry(stream_model, full_messages)
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         if use_premium:
             msg = (
                 "**Rate limit is currently over.** Please contact Eshant directly:\n\n"
