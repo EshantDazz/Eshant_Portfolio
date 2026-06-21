@@ -1,3 +1,4 @@
+# import logging
 import time
 from dataclasses import dataclass
 from typing import Annotated, Any
@@ -29,6 +30,19 @@ from portfolio_model.llms import (
 
 memory = MemorySaver()
 load_dotenv()
+
+# _logger = logging.getLogger("portfolio.chat")
+# if not _logger.handlers:
+#     _handler = logging.FileHandler("portfolio.log", mode="a", encoding="utf-8")
+#     _handler.setFormatter(
+#         logging.Formatter(
+#             "%(asctime)s  [%(levelname)s]  %(name)s  —  %(message)s",
+#             datefmt="%Y-%m-%d %H:%M:%S",
+#         )
+#     )
+#     _logger.addHandler(_handler)
+#     _logger.setLevel(logging.INFO)
+#     _logger.propagate = False
 
 
 class InvokeRateLimitError(Exception):
@@ -194,6 +208,7 @@ async def generate_response(
             config,
             stream_mode="messages",
         ):
+            # _logger.info("session=%s  chunk=%r", session_id, chunk)
             if (
                 chunk[0].content
                 and isinstance(chunk[0], AIMessageChunk)
