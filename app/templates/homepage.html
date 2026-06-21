@@ -265,6 +265,116 @@
     .tag{font-size:11px}
     .status{font-size:11.5px;padding:6px 11px}
   }
+
+  /* ── CHAT WIDGET ── */
+  .chat-fab{position:fixed;bottom:100px;right:24px;z-index:960;display:flex;align-items:center;
+    gap:9px;padding:0 18px 0 14px;height:48px;border-radius:24px;
+    background:linear-gradient(135deg,#5B8DEF 0%,#3FD0C9 100%);border:none;cursor:pointer;
+    color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.03em;white-space:nowrap;
+    box-shadow:0 4px 24px rgba(91,141,239,.4);transition:transform .2s,box-shadow .2s;
+    animation:fab-glow 3s ease-in-out infinite;}
+  @keyframes fab-glow{
+    0%,100%{box-shadow:0 4px 24px rgba(91,141,239,.4);}
+    50%{box-shadow:0 6px 32px rgba(91,141,239,.65),0 0 0 6px rgba(91,141,239,.08);}
+  }
+  .chat-fab:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(91,141,239,.55);}
+  .fab-label{font-size:12px;font-weight:500;}
+
+  .chat-panel{position:fixed;bottom:162px;right:24px;z-index:958;width:400px;height:580px;
+    background:#0a0f1e;border:1px solid rgba(91,141,239,.18);border-radius:20px;
+    display:flex;flex-direction:column;overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.75),0 0 0 1px rgba(91,141,239,.08);
+    transform:scale(.94) translateY(16px);opacity:0;pointer-events:none;
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1),opacity .2s;}
+  .chat-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
+
+  .chat-head{padding:14px 16px 0;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+  .chat-head-title{display:flex;align-items:center;gap:8px;}
+  .chat-title-text{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--ink);letter-spacing:.03em;}
+  .mode-badge{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.1em;
+    padding:2px 7px;border-radius:10px;background:rgba(91,141,239,.15);color:var(--blue);
+    border:1px solid rgba(91,141,239,.3);transition:all .3s;}
+  .mode-badge.pro{background:rgba(245,181,68,.15);color:var(--amber);border-color:rgba(245,181,68,.3);}
+  .chat-close-btn{background:none;border:none;color:var(--muted);cursor:pointer;width:28px;height:28px;
+    display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .15s,color .15s;}
+  .chat-close-btn:hover{background:rgba(255,255,255,.06);color:var(--ink);}
+
+  .chat-tabs{display:flex;gap:4px;padding:10px 16px 0;flex-shrink:0;}
+  .chat-tab{flex:1;padding:8px 10px;border-radius:10px;background:transparent;
+    border:1px solid transparent;color:var(--muted);font-family:var(--mono);font-size:11px;
+    letter-spacing:.04em;cursor:pointer;transition:all .2s;display:flex;align-items:center;
+    justify-content:center;gap:4px;}
+  .chat-tab:hover{background:rgba(255,255,255,.05);color:var(--ink);}
+  .chat-tab.active{background:rgba(91,141,239,.12);border-color:rgba(91,141,239,.3);color:var(--blue);}
+  .chat-tab.premium-tab.active{background:rgba(245,181,68,.1);border-color:rgba(245,181,68,.25);color:var(--amber);}
+  .chat-divider{height:1px;background:rgba(255,255,255,.07);margin:10px 0 0;flex-shrink:0;}
+
+  .chat-msgs{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px;}
+  .chat-msgs::-webkit-scrollbar{width:3px;}
+  .chat-msgs::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px;}
+
+  .chat-bubble{max-width:86%;padding:10px 14px;border-radius:14px;font-size:14px;line-height:1.65;word-break:break-word;}
+  .chat-bubble.user{align-self:flex-end;background:linear-gradient(135deg,var(--blue),#4A7DD4);
+    color:#fff;border-bottom-right-radius:4px;}
+  .chat-bubble.ai{align-self:flex-start;background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.1);color:var(--ink);border-bottom-left-radius:4px;}
+  .chat-bubble.ai.pro-bubble{background:rgba(245,181,68,.04);border-color:rgba(245,181,68,.15);}
+  .chat-bubble.ai p{margin:0 0 6px;}
+  .chat-bubble.ai p:last-child{margin-bottom:0;}
+  .chat-bubble.ai h1,.chat-bubble.ai h2,.chat-bubble.ai h3{font-size:14px;font-weight:700;margin:10px 0 4px;color:var(--ink);}
+  .chat-bubble.ai ul,.chat-bubble.ai ol{margin:4px 0;padding-left:18px;}
+  .chat-bubble.ai li{margin-bottom:2px;}
+  .chat-bubble.ai code{background:rgba(255,255,255,.08);padding:1px 5px;border-radius:4px;font-family:var(--mono);font-size:12px;}
+  .chat-bubble.ai pre{background:rgba(0,0,0,.5);border-radius:8px;padding:10px 12px;overflow-x:auto;margin:6px 0;border:1px solid rgba(255,255,255,.08);}
+  .chat-bubble.ai pre code{background:none;padding:0;font-size:12px;}
+  .chat-bubble.ai strong{color:#fff;font-weight:600;}
+  .chat-bubble.ai em{color:var(--blue-bright);font-style:italic;}
+  .chat-bubble.ai a{color:var(--blue);text-decoration:underline;}
+  .chat-bubble.ai blockquote{border-left:2px solid var(--blue);margin:6px 0;padding-left:12px;color:var(--muted);font-style:italic;}
+
+  .chat-typing{display:inline-flex;gap:4px;padding:2px 0;}
+  .chat-typing span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:ct .9s infinite;}
+  .chat-typing span:nth-child(2){animation-delay:.2s}
+  .chat-typing span:nth-child(3){animation-delay:.4s}
+  @keyframes ct{0%,60%,100%{opacity:.25}30%{opacity:1}}
+
+  .premium-gate{flex:1;display:flex;align-items:center;justify-content:center;padding:24px;}
+  .premium-gate-inner{text-align:center;width:100%;}
+  .prem-icon{font-size:30px;margin-bottom:12px;color:var(--amber);}
+  .prem-title{font-family:var(--display);font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  .prem-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.55;}
+  .chat-auth-input{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:10px;padding:10px 14px;color:var(--ink);font-family:var(--body);font-size:13.5px;
+    outline:none;transition:border-color .15s;margin-bottom:8px;display:block;box-sizing:border-box;}
+  .chat-auth-input:focus{border-color:var(--amber);}
+  .chat-auth-input::placeholder{color:var(--muted);}
+  .chat-auth-btn{width:100%;padding:11px 16px;background:linear-gradient(135deg,#F5B544,#E09A28);
+    border:none;border-radius:10px;color:#000;font-family:var(--mono);font-size:12.5px;
+    font-weight:700;letter-spacing:.05em;cursor:pointer;margin-top:4px;transition:opacity .15s,transform .1s;}
+  .chat-auth-btn:hover{opacity:.9;transform:translateY(-1px);}
+  .chat-auth-btn:disabled{opacity:.5;cursor:default;transform:none;}
+  .prem-error{font-size:12px;color:#F87171;margin-top:8px;min-height:16px;}
+
+  .chat-input-row{padding:10px 14px 12px;border-top:1px solid rgba(255,255,255,.07);
+    display:flex;gap:8px;align-items:flex-end;flex-shrink:0;}
+  .chat-input-row textarea{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+    border-radius:10px;padding:9px 12px;color:var(--ink);font-family:var(--body);font-size:13.5px;
+    resize:none;outline:none;transition:border-color .15s;max-height:120px;line-height:1.5;}
+  .chat-input-row textarea:focus{border-color:var(--blue);}
+  .chat-panel.premium-active .chat-input-row textarea:focus{border-color:var(--amber);}
+  .chat-input-row textarea::placeholder{color:var(--muted);}
+  .chat-send{width:36px;height:36px;border-radius:10px;background:var(--blue);border:none;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;transition:opacity .15s,transform .1s;}
+  .chat-panel.premium-active .chat-send{background:var(--amber);color:#000;}
+  .chat-send:hover{transform:scale(1.06);}
+  .chat-send:disabled{opacity:.4;cursor:default;transform:none;}
+
+  @media(max-width:440px){
+    .chat-panel{right:0;bottom:0;width:100vw;height:100dvh;border-radius:0;border:none;}
+    .chat-fab{bottom:88px;right:16px;padding:0;width:52px;height:52px;border-radius:50%;justify-content:center;}
+    .fab-label{display:none;}
+    .chat-panel.open{transform:none;}
+  }
 </style>
 </head>
 <body>
@@ -506,6 +616,55 @@
   </div>
 </nav>
 
+<!-- Floating chat button -->
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" title="Ask Eshant AI Agent">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <span class="fab-label">Ask Eshant AI Agent</span>
+</button>
+
+<!-- Chat panel -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <span class="chat-title-text">Eshant AI Agent</span>
+      <span class="mode-badge" id="modeBadge">FREE</span>
+    </div>
+    <button class="chat-close-btn" onclick="toggleChat()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="chat-tabs">
+    <button class="chat-tab active" id="tabFree" onclick="setChatMode('free')">Free</button>
+    <button class="chat-tab premium-tab" id="tabPremium" onclick="setChatMode('premium')">✦ Premium</button>
+  </div>
+  <div class="chat-divider"></div>
+  <div class="chat-msgs" id="chatMsgs"></div>
+  <div class="premium-gate" id="premiumGate" style="display:none">
+    <div class="premium-gate-inner">
+      <div class="prem-icon">✦</div>
+      <p class="prem-title">Premium Access</p>
+      <p class="prem-sub">Enter your credentials to unlock the enhanced AI agent with priority model access.</p>
+      <input type="text" id="premUsername" placeholder="Username" class="chat-auth-input" autocomplete="off">
+      <input type="password" id="premPassword" placeholder="Password" class="chat-auth-input">
+      <button class="chat-auth-btn" id="premAuthBtn" onclick="authenticatePremium()">Unlock Premium</button>
+      <p class="prem-error" id="premError"></p>
+    </div>
+  </div>
+  <div class="chat-input-row" id="chatInputRow">
+    <textarea id="chatInput" placeholder="Ask me about Eshant…" rows="1"
+      onkeydown="handleChatKey(event)" oninput="autoResizeChat(this)"></textarea>
+    <button class="chat-send" id="chatSend" onclick="sendChatMessage()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
 <!-- PDF Modal -->
 <div class="pdf-overlay" id="pdfOverlay" onclick="closePdfOnBackdrop(event)">
   <div class="pdf-modal">
@@ -588,6 +747,190 @@
   // caret blink
   const caret=document.getElementById('caret');
   setInterval(()=>{caret.style.opacity=caret.style.opacity==='0'?'1':'0';},530);
+
+  // ── CHAT WIDGET ──
+  const chatFreeSessionId = 'free_' + Math.random().toString(36).substr(2, 9);
+  const chatPremSessionId = 'prem_' + Math.random().toString(36).substr(2, 9);
+  let chatMode = 'free';
+  let premVerified = false;
+  let premUser = '';
+  let premPass = '';
+  let chatBusy = false;
+
+  function toggleChat() {
+    const panel = document.getElementById('chatPanel');
+    panel.classList.toggle('open');
+    if (panel.classList.contains('open')) {
+      setTimeout(() => {
+        if (chatMode === 'free' || premVerified) document.getElementById('chatInput').focus();
+      }, 280);
+    }
+  }
+
+  function setChatMode(mode) {
+    chatMode = mode;
+    const panel   = document.getElementById('chatPanel');
+    const badge   = document.getElementById('modeBadge');
+    const gate    = document.getElementById('premiumGate');
+    const msgs    = document.getElementById('chatMsgs');
+    const inputRow= document.getElementById('chatInputRow');
+    const tabFree = document.getElementById('tabFree');
+    const tabPrem = document.getElementById('tabPremium');
+    msgs.innerHTML = '';
+    if (mode === 'free') {
+      tabFree.classList.add('active'); tabPrem.classList.remove('active');
+      panel.classList.remove('premium-active');
+      badge.textContent = 'FREE'; badge.classList.remove('pro');
+      gate.style.display = 'none';
+      msgs.style.display = 'flex'; inputRow.style.display = 'flex';
+    } else {
+      tabFree.classList.remove('active'); tabPrem.classList.add('active');
+      panel.classList.add('premium-active');
+      badge.textContent = 'PRO'; badge.classList.add('pro');
+      if (!premVerified) {
+        gate.style.display = 'flex';
+        msgs.style.display = 'none'; inputRow.style.display = 'none';
+      } else {
+        gate.style.display = 'none';
+        msgs.style.display = 'flex'; inputRow.style.display = 'flex';
+        setTimeout(() => document.getElementById('chatInput').focus(), 100);
+      }
+    }
+  }
+
+  async function authenticatePremium() {
+    const username = document.getElementById('premUsername').value.trim();
+    const password = document.getElementById('premPassword').value;
+    const btn = document.getElementById('premAuthBtn');
+    const errEl = document.getElementById('premError');
+    if (!username || !password) { errEl.textContent = 'Please enter both username and password.'; return; }
+    btn.disabled = true; btn.textContent = 'Verifying…'; errEl.textContent = '';
+    try {
+      const resp = await fetch('/chat/verify-premium', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await resp.json();
+      if (data.valid) {
+        premVerified = true; premUser = username; premPass = password;
+        document.getElementById('premiumGate').style.display = 'none';
+        document.getElementById('chatMsgs').style.display = 'flex';
+        document.getElementById('chatInputRow').style.display = 'flex';
+        setTimeout(() => document.getElementById('chatInput').focus(), 100);
+      } else {
+        errEl.textContent = 'Incorrect username or password. Please try the Free mode.';
+        btn.disabled = false; btn.textContent = 'Unlock Premium';
+      }
+    } catch (_) {
+      errEl.textContent = 'Could not verify. Please try again.';
+      btn.disabled = false; btn.textContent = 'Unlock Premium';
+    }
+  }
+
+  function handleChatKey(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChatMessage(); }
+  }
+
+  function autoResizeChat(el) {
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+  }
+
+  function appendChatMsg(content, role) {
+    const msgs = document.getElementById('chatMsgs');
+    const div = document.createElement('div');
+    div.className = 'chat-bubble ' + role;
+    if (role === 'ai' && chatMode === 'premium') div.classList.add('pro-bubble');
+    if (role === 'user') { div.textContent = content; }
+    else { div.innerHTML = renderMd(content); }
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+    return div;
+  }
+
+  function renderMd(text) {
+    text = text.replace(/```[\w]*\n?([\s\S]*?)```/g, function(_, c) {
+      return '<pre><code>' + c.replace(/</g,'&lt;').replace(/>/g,'&gt;').trim() + '</code></pre>';
+    });
+    text = text.replace(/`([^`\n]+)`/g, '<code>$1</code>');
+    text = text.replace(/^#{3}\s+(.+)$/gm, '<h3>$1</h3>');
+    text = text.replace(/^#{2}\s+(.+)$/gm, '<h2>$1</h2>');
+    text = text.replace(/^#\s+(.+)$/gm,    '<h1>$1</h1>');
+    text = text.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+    text = text.replace(/\*\*(.+?)\*\*/g,     '<strong>$1</strong>');
+    text = text.replace(/\*([^*\n]+)\*/g,      '<em>$1</em>');
+    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    text = text.replace(/^>\s+(.+)$/gm, '<blockquote>$1</blockquote>');
+    text = text.replace(/^[-*]\s+(.+)$/gm, '<li>$1</li>');
+    text = text.replace(/^\d+\.\s+(.+)$/gm, '<li>$1</li>');
+    text = text.replace(/(<li>[\s\S]+?<\/li>\n?)+/g, '<ul>$&</ul>');
+    text = text.split(/\n{2,}/).map(function(b) {
+      b = b.trim();
+      if (!b) return '';
+      if (/^<(h[1-3]|ul|ol|pre|blockquote)/.test(b)) return b;
+      return '<p>' + b.replace(/\n/g, '<br>') + '</p>';
+    }).join('');
+    return text;
+  }
+
+  async function sendChatMessage() {
+    if (chatBusy) return;
+    const input = document.getElementById('chatInput');
+    const query = input.value.trim();
+    if (!query) return;
+    input.value = ''; input.style.height = 'auto';
+    document.getElementById('chatSend').disabled = true;
+    chatBusy = true;
+    appendChatMsg(query, 'user');
+    const msgs = document.getElementById('chatMsgs');
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'chat-bubble ai' + (chatMode === 'premium' ? ' pro-bubble' : '');
+    typingDiv.innerHTML = '<div class="chat-typing"><span></span><span></span><span></span></div>';
+    msgs.appendChild(typingDiv); msgs.scrollTop = msgs.scrollHeight;
+    let fullText = '', aiBubble = null;
+    const sid = chatMode === 'free' ? chatFreeSessionId : chatPremSessionId;
+    try {
+      const body = { query, session_id: sid, mode: chatMode };
+      if (chatMode === 'premium') { body.username = premUser; body.password = premPass; }
+      const resp = await fetch('/chat/stream', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (!resp.ok) {
+        const e = await resp.json().catch(() => ({}));
+        throw new Error(e.detail || 'HTTP ' + resp.status);
+      }
+      const reader = resp.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n'); buffer = lines.pop();
+        for (const line of lines) {
+          if (!line.startsWith('data:')) continue;
+          const raw = line.slice(5).trim();
+          if (raw === '[DONE]') { reader.cancel(); break; }
+          try {
+            const chunk = JSON.parse(raw);
+            fullText += chunk;
+            if (!aiBubble) { typingDiv.remove(); aiBubble = appendChatMsg(fullText, 'ai'); }
+            else { aiBubble.innerHTML = renderMd(fullText); msgs.scrollTop = msgs.scrollHeight; }
+          } catch (_) {}
+        }
+      }
+    } catch (err) {
+      typingDiv.remove();
+      appendChatMsg(err.message || 'Something went wrong. Please try again.', 'ai');
+    }
+    if (!aiBubble) typingDiv.remove();
+    chatBusy = false;
+    document.getElementById('chatSend').disabled = false;
+    input.focus();
+  }
 </script>
 </body>
 </html>

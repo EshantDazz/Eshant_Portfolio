@@ -3,6 +3,7 @@ from fastapi.openapi.docs import get_redoc_html, get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
 
 from app.auth import verify_docs_access
+from app.router.chat import router as chat_router
 from app.router.documents import router as documents_router
 from app.router.health import router as health_router
 from app.router.home import router as home_router
@@ -17,6 +18,7 @@ app = FastAPI(
 app.include_router(home_router)
 app.include_router(health_router)
 app.include_router(documents_router)
+app.include_router(chat_router)
 
 
 @app.get("/openapi.json", include_in_schema=False, dependencies=[Depends(verify_docs_access)])
