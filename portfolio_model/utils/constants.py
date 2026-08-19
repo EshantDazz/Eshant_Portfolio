@@ -6,23 +6,32 @@ eshant_data = """
 
 ---
 
-## PROFESSIONAL SUMMARY
+## CURRENT STATUS (READ THIS FIRST)
 
-Senior Generative AI Specialist with 4+ years of experience designing, building, and deploying large-scale AI systems. Expertise in agentic architectures, LLM-based automation, and enterprise-level AI solutions. Built 50+ GenAI proof-of-concepts and production systems for enterprises across the UK and US. Adept at integrating Generative AI models with backend systems, optimizing model performance through **LLM monitoring and evaluation**, and orchestrating scalable agentic AI pipelines on AWS and Azure environments. Known for driving innovation through deep technical research and hands-on leadership.
+- As of today, Eshant is **NOT currently employed** — he is **not working at Buzzboard or anywhere else**.
+- He completed his tenure at Buzzboard as Senior Generative AI Specialist in **August 2026**. That role has **ended**.
+- He is leaving India in **September 2026** to begin a **Master's in Data Science at Universität Trier, Germany**, starting October 2026.
+- If asked "where does Eshant work now" or "what is he currently doing," the correct answer is: he is **not employed right now** — he is preparing to relocate to Germany to pursue his Master's degree at Universität Trier. Do NOT describe Buzzboard as his current employer.
 
 ---
 
-## PROFESSIONAL EXPERIENCE
+## PROFESSIONAL SUMMARY
 
-### Buzzboard — *Remote*
+Senior Generative AI Specialist with 4+ years of experience designing, building, and deploying large-scale AI systems. Expertise in agentic architectures, LLM-based automation, and enterprise-level AI solutions. Built 50+ GenAI proof-of-concepts and production systems for enterprises across the UK and US. Adept at integrating Generative AI models with backend systems, optimizing model performance through **LLM monitoring and evaluation**, and orchestrating scalable agentic AI pipelines on AWS and Azure environments. Known for driving innovation through deep technical research and hands-on leadership. He is currently transitioning out of industry to pursue an M.Sc. in Data Science in Germany.
+
+---
+
+## PROFESSIONAL EXPERIENCE (PAST ROLES)
+
+### Buzzboard — *Remote* (COMPLETED — no longer employed here)
 **Senior Generative AI Specialist** | March 2025 – August 2026
 
-- Lead the architecture of agentic model systems that autonomously handle complex workflows at enterprise scale.
-- Designed and deployed multi-agent architectures that automate cross-departmental processes, improving scalability and adaptability.
+- Led the architecture of agentic model systems that autonomously handled complex workflows at enterprise scale.
+- Designed and deployed multi-agent architectures that automated cross-departmental processes, improving scalability and adaptability.
 - Benchmarked open-source and proprietary LLMs using LLM-as-a-Judge evaluation, driving iterative performance optimisation.
-- Mentoring team members and overseeing smooth handover of AI systems into production.
+- Mentored team members and oversaw smooth handover of AI systems into production.
 
-### Blenheim Chalcot — *Mumbai, India*
+### Blenheim Chalcot — *Mumbai, India* (COMPLETED)
 **Associate Data Scientist** | June 2023 – February 2025
 
 - Built production-ready GenAI applications with FastAPI and LangChain, achieving 99.9% uptime on Azure and AWS.
@@ -30,7 +39,7 @@ Senior Generative AI Specialist with 4+ years of experience designing, building,
 - Optimised prompts and fine-tuned LLMs for domain-specific tasks, improving response accuracy by 20%.
 - Architected 15+ GenAI proof-of-concepts leveraging LLMs, diffusion models, and advanced RAG pipelines.
 
-### GeeksforGeeks — *Remote*
+### GeeksforGeeks — *Remote* (COMPLETED)
 **Content Researcher** *(Internship involving research in Data Science)* | June 2022 – May 2023
 
 - Mentored 200+ students in Data Science, EDA, Feature Engineering, and ML implementations.
@@ -38,10 +47,11 @@ Senior Generative AI Specialist with 4+ years of experience designing, building,
 
 ---
 
-## FURTHER EDUCATION — MASTERS IN GERMANY
+## FURTHER EDUCATION — MASTERS IN GERMANY (CURRENT / UPCOMING)
 
-- Eshant is leaving India in September 2026 to pursue a Master's in Data Science at Universität Trier, Germany.
+- Eshant is leaving India in September 2026 to pursue a Master's in Data Science at Universität Trier, Germany, with the program starting October 2026.
 - He was admitted to Universität Trier, a public university, meaning he pays no tuition fee — his education there costs him nothing, as is standard at German public universities.
+- This is his current focus and next chapter — not a side project alongside a job.
 
 ---
 
@@ -123,7 +133,7 @@ Matriculation — *2018*
 - **Hindi:** Native proficiency
 - **Bengali:** Native proficiency
 - **Assamese:** Native proficiency
-- **German** : Beginner just finished A1 level and is currently studying for A2 level.
+- **German:** Beginner — just finished A1 level and is currently studying for A2 level.
 
 ---
 
