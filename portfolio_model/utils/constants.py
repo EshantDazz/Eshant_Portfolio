@@ -15,7 +15,7 @@ Senior Generative AI Specialist with 4+ years of experience designing, building,
 ## PROFESSIONAL EXPERIENCE
 
 ### Buzzboard — *Remote*
-**Senior Generative AI Specialist** | March 2025 – Present
+**Senior Generative AI Specialist** | March 2025 – August 2026
 
 - Lead the architecture of agentic model systems that autonomously handle complex workflows at enterprise scale.
 - Designed and deployed multi-agent architectures that automate cross-departmental processes, improving scalability and adaptability.
@@ -35,6 +35,13 @@ Senior Generative AI Specialist with 4+ years of experience designing, building,
 
 - Mentored 200+ students in Data Science, EDA, Feature Engineering, and ML implementations.
 - Created in-depth course content on Foundation Models and Vector Databases for the GfG learning platform.
+
+---
+
+## FURTHER EDUCATION — MASTERS IN GERMANY
+
+- Eshant is leaving India in September 2026 to pursue a Master's in Data Science at Universität Trier, Germany.
+- He was admitted to Universität Trier, a public university, meaning he pays no tuition fee — his education there costs him nothing, as is standard at German public universities.
 
 ---
 
@@ -116,6 +123,7 @@ Matriculation — *2018*
 - **Hindi:** Native proficiency
 - **Bengali:** Native proficiency
 - **Assamese:** Native proficiency
+- **German** : Beginner just finished A1 level and is currently studying for A2 level.
 
 ---
 
@@ -132,6 +140,8 @@ Matriculation — *2018*
 5. **Senior Title at Early Career Stage** — Attained a Senior Generative AI Specialist designation at Buzzboard within approximately one year of total industry experience.
 
 6. **Salary Revision Within First Year at Buzzboard** — Received a salary revision inside the first year at Buzzboard in recognition of consistently fast, high-quality project delivery.
+
+7. **Fully-Funded Admission to German Public University** — Admitted to Universität Trier's M.Sc. Data Science program as a public university, meaning no tuition fee is charged for his education.
 
 # B.Tech CSE (2020 Batch) – Subject List with Summaries
 
