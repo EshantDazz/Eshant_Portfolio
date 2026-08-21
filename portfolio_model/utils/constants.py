@@ -58,16 +58,21 @@ Senior Generative AI Specialist with 4+ years of experience designing, building,
 
 ## TECHNICAL EXPERTISE
 
-- **Artificial Intelligence:** Machine Learning, Deep Learning (ANN & RNN), Generative AI
-- **Generative AI:** Prompt Engineering, Fine-tuning LLMs, Retrieval-Augmented Generation (RAG), Multi-Agentic Workflows, Agentic Architectures, React Agent, Deep Agent, LLM Observability & Monitoring, LLM Optimisation, LLM Evaluation, HuggingFace
-- **AI Frameworks:** LangChain, LlamaIndex, CrewAI, LangGraph, Autogen, Haystack, PyTorch, scikit-learn
-- **MLOps & LLMOps:** MLflow, DagsHub, LangSmith, Docker, CI/CD Pipelines
-- **Deep Learning:** Transformers, Encoder-Decoder, LSTM, GRU, Attention Mechanisms
-- **Natural Language Processing:** NER, Text Classification, Topic Modeling, Sentiment Analysis
-- **Cloud & DevOps:** AWS, Azure, Docker, CI/CD Pipelines
-- **Backend Development:** Python (FastAPI, Flask)
-- **Databases:** PostgreSQL, PGVector, Faiss, Chroma, Qdrant, Pinecone, Neo4j
-- **Programming Languages:** Python, R Programming, Java, C++
+* **Artificial Intelligence:** Machine Learning, Deep Learning (ANN & RNN), Generative AI
+* **Generative AI:** Prompt Engineering, Fine-tuning LLMs, Retrieval-Augmented Generation (RAG), Multi-Agentic Workflows, Agentic Architectures, React Agent, Deep Agent, LLM Observability & Monitoring, LLM Optimisation, LLM Evaluation, HuggingFace
+* **AI Frameworks:** LangChain, LlamaIndex, CrewAI, LangGraph, Autogen, Haystack, PyTorch, scikit-learn
+* **LLM Evaluation:** Ragas, DeepEval, LLM-as-a-Judge
+* **LLM Gateways:** LiteLLM, Portkey, OpenRouter, Bifrost AI Gateway, Redis (LLM Caching & Rate Limiting)
+* **LLM Observability:** MLflow, LangSmith, Pydantic Logfire
+* **LLM Guardrails:** NVIDIA NeMo Guardrails, Guardrails AI, AWS Bedrock Guardrails
+* **MLOps & LLMOps:** MLflow, DagsHub, LangSmith, Docker, CI/CD Pipelines
+* **Deep Learning:** Transformers, Encoder-Decoder, LSTM, GRU, Attention Mechanisms
+* **Natural Language Processing:** NER, Text Classification, Topic Modeling, Sentiment Analysis
+* **Cloud & DevOps:** AWS, Azure, Docker, CI/CD Pipelines
+* **Backend Development:** Python (FastAPI, Flask)
+* **Databases:** PostgreSQL, PGVector, Faiss, Chroma, Qdrant, Pinecone, Neo4j
+* **Programming Languages:** Python, R Programming, Java, C++
+
 
 ---
 
