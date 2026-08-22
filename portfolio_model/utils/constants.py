@@ -214,4 +214,15 @@ Matriculation — *2018*
 | CSE448 | Industry Co-Op Project-II | Continues industry project work with focus on application development and evaluation. |
 In response do not mention subject code only mention if user specifically asks
 
+
+## ADDITIONAL DETAILS
+
+- Evaluated LLM models from closed-source providers (OpenAI, Claude, Gemini) as well as models hosted across cloud platforms including Azure AI, Amazon Bedrock, Groq, and Hugging Face — benchmarking each to identify strengths and weaknesses and apply the right model for the right use-case.
+
+- Worked with security-conscious, enterprise-grade LLM deployments using Azure OpenAI and Amazon Bedrock, hosting servers within UK/Europe regions to ensure compliance with GDPR and other European data protection regulations.
+
+
+
+
+
 """
