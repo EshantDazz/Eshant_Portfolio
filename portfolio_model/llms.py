@@ -5,6 +5,7 @@ from langchain_groq import ChatGroq
 
 load_dotenv()
 
+# QUEN 3.6
 
 llm_quen_stream = ChatGroq(
     model="qwen/qwen3.6-27b",
